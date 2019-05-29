@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="udp_simulator">
+  <items>
+    <AnchorPane>
+         <children>
+            <VBox alignment="CENTER" prefHeight="598.0" prefWidth="496.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <VBox fx:id="fieldVBox" alignment="CENTER" fillWidth="false" maxWidth="476.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <HBox alignment="CENTER" fillHeight="false" spacing="30.0" VBox.vgrow="SOMETIMES">
+                     <children>
+                        <Button fx:id="move_actor0" mnemonicParsing="false" text="Move Actor 0" />
+                        <Button fx:id="move_actor1" mnemonicParsing="false" text="Move Actor 1" />
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="40.0" />
+               </padding>
+            </VBox>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets></AnchorPane>
+      <SplitPane dividerPositions="0.4, 0.8" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
+        <items>
+            <HBox alignment="CENTER">
+               <children>
+                  <VBox HBox.hgrow="SOMETIMES">
+                     <children>
+                        <AnchorPane minHeight="22.0" VBox.vgrow="NEVER">
+                           <children>
+                              <Label fx:id="actor0label" alignment="CENTER" layoutX="-1.0" layoutY="3.0" prefHeight="22.0" prefWidth="248.0" text="Actor 0, Pos: (x, y), States:" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <ScrollPane VBox.vgrow="SOMETIMES">
+                           <content>
+                              <VBox fx:id="actor0VBox" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="246.0" />
+                           </content>
+                        </ScrollPane>
+                        <AnchorPane minHeight="22.0">
+                           <children>
+                              <Label fx:id="agent0label" alignment="CENTER" contentDisplay="TOP" prefHeight="22.0" prefWidth="248.0" text="Agent 0, Pos: (x, y), State: Idle" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+                  <VBox HBox.hgrow="SOMETIMES">
+                     <children>
+                        <AnchorPane minHeight="22.0" VBox.vgrow="NEVER">
+                           <children>
+                              <Label fx:id="actor1label" alignment="CENTER" layoutX="-1.0" layoutY="3.0" prefHeight="22.0" prefWidth="248.0" text="Actor 1, Pos: (x, y), States:" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <ScrollPane VBox.vgrow="SOMETIMES">
+                           <content>
+                              <VBox fx:id="actor1VBox" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="246.0" />
+                           </content>
+                        </ScrollPane>
+                        <AnchorPane minHeight="22.0">
+                           <children>
+                              <Label fx:id="agent1label" alignment="CENTER" contentDisplay="TOP" prefHeight="22.0" prefWidth="248.0" text="Agent 1, Pos: (x, y), State: Idle" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+            </HBox>
+            <VBox>
+               <children>
+                  <AnchorPane layoutX="10.0" layoutY="10.0" minHeight="40.0" prefHeight="40.0">
+                     <children>
+                        <Label alignment="CENTER" layoutX="205.0" layoutY="14.0" prefHeight="40.0" prefWidth="496.0" text="Agent Actionlog" textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+                  <ScrollPane fitToHeight="true" fitToWidth="true" VBox.vgrow="SOMETIMES">
+                     <content>
+                        <TextArea fx:id="agent_actionlog" editable="false" nodeOrientation="LEFT_TO_RIGHT" promptText="Agent actions are displayed here." scrollTop="100.0" />
+                     </content>
+                  </ScrollPane>
+               </children>
+            </VBox>
+          <AnchorPane minHeight="100.0" prefHeight="100.0" SplitPane.resizableWithParent="false">
+               <children>
+                  <Button fx:id="state_bow" layoutX="113.0" layoutY="14.0" mnemonicParsing="false" text="Bow" />
+                  <Button fx:id="state_wave" layoutX="165.0" layoutY="14.0" mnemonicParsing="false" text="Wave" />
+                  <Button fx:id="state_hands" layoutX="223.0" layoutY="14.0" mnemonicParsing="false" text="Handstogether" />
+                  <Label layoutX="22.0" layoutY="45.0" text="Add states" />
+                  <TextField fx:id="state_textfield" layoutX="113.0" layoutY="62.0" />
+                  <Button fx:id="state_fromText" layoutX="285.0" layoutY="62.0" mnemonicParsing="false" text="Add from Textfield" />
+                  <Button fx:id="state_startScaling" layoutX="359.0" layoutY="14.0" mnemonicParsing="false" text="Start Scaling" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+  </items>
+</SplitPane>

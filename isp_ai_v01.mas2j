@@ -1,0 +1,31 @@
+/* Jason Project */
+
+
+
+MAS isp_ai_v01 {
+
+
+
+    infrastructure: Centralised
+
+
+
+    environment: isp_environment
+
+    agents:
+
+		//isp_agent #3;
+
+        //wave_agent1;
+		
+        //wave_agent2;
+
+        //testing_agent1;
+
+        //bat_agent1;
+		
+        supervisor1;
+
+}
+
+

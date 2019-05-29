@@ -1,0 +1,1 @@
++actorstate(actor0, handstogether) : not agentstate(agent0, overrideaction1) <- agentaction(agent0, action1).
